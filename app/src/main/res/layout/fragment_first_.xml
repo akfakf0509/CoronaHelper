@@ -11,9 +11,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerlnParent="true"
+
         android:background="@color/colorAccent"
         android:text="첫번째 화면"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp" />
 </LinearLayout>
