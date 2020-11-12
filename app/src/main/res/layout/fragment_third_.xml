@@ -10,8 +10,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#A6AFCA"
-        android:text="세번째 화면"
+        android:text="자가진단 화면"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>

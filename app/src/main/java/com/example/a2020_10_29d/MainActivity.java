@@ -52,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
         Second_Fragment secondFragment = new Second_Fragment();
         adapter.addItem(secondFragment);
 
+
         Third_Fragment thirdFragment = new Third_Fragment();
         adapter.addItem(thirdFragment);
 
         pager.setAdapter(adapter);
+        pager.setCurrentItem(1,false);
     }
 
 

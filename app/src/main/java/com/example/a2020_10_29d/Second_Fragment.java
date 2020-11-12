@@ -60,5 +60,6 @@ public class Second_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_, container, false);
+
     }
 }
