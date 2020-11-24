@@ -33,13 +33,14 @@ public class First_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first_, container, false);
-        mWebView = (WebView) view.findViewById(R.id.webview);
-        mWebView.setWebViewClient(new WebViewClient());
-      //  mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        mWebView = view.findViewById(R.id.webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
+        mWebView.loadUrl("https://coronamap.site/");
+        mWebView.setWebChromeClient(new WebChromeClient());
+        mWebView.setWebViewClient(new WebViewClient());
+        //mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
-        mWebView.loadUrl("https://www.naver.com/");
         return view;
     }
 

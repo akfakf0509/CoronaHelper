@@ -14,18 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="코로나 맵" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="자가진단" />
+         />
     </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
