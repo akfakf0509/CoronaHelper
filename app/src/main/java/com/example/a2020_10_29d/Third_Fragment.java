@@ -1,5 +1,6 @@
 package com.example.a2020_10_29d;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.chip.ChipGroup;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +60,41 @@ public class Third_Fragment extends Fragment {
         }
     }
 
+    private Context context;
+
+    ChipGroup q1;
+    ChipGroup q2;
+    ChipGroup q3;
+    ChipGroup q4;
+    ChipGroup q5;
+
+    Button commit_button;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_third_, container, false);
+        context = container.getContext();
+
+        q1 = v.findViewById(R.id.q1_chipGroup);
+        q2 = v.findViewById(R.id.q2_chipGroup);
+        q3 = v.findViewById(R.id.q3_chipGroup);
+        q4 = v.findViewById(R.id.q4_chipGroup);
+        q5 = v.findViewById(R.id.q5_chipGroup);
+
+        commit_button = v.findViewById(R.id.commit_button);
+
+        commit_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(q1.getCheckedChipId() != R.id.q1_chip1)
+                    Toast.makeText(context, "Need Self Check", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(context, "Commited", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third_, container, false);
+        return v;
     }
 }
