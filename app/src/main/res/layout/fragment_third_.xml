@@ -1,16 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECECEC"
     android:orientation="vertical"
-    tools:context=".Third_Fragment" >
+    tools:context=".Third_Fragment">
 
-    <TextView
-        android:id="@+id/textView3"
+    <FrameLayout
+        android:id="@+id/title_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="자가진단 화면"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/title_background"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/rounded_solid" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="자가진단"
+            android:textAlignment="center"
+            android:textColor="#151515"
+            android:textSize="24sp" />
+
+    </FrameLayout>    <!-- title -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/q1_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/q1_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/all_rounded_solid" />
+
+                <LinearLayout
+                    android:id="@+id/q1_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/q1_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="몸에 열이 있나요?"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/q1_chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q1_chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="37.5도 미만" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q1_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="37.5도 ~ 38도 미만 또는 발열감" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q1_chip3"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="38도 이상" />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </FrameLayout>    <!-- Q1 -->
+
+            <FrameLayout
+                android:id="@+id/q2_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/q2_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/all_rounded_solid" />
+
+                <LinearLayout
+                    android:id="@+id/q2_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/q2_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="코로나 19가 의심되는 증상이 있나요? (모두 선택)"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/q2_chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="아니오" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="기침" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip3"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="인후통" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip4"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="호흡곤란" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip5"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="설사" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip6"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="메스꺼움" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip7"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="미각" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q2_chip8"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="후각 마비" />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </FrameLayout>    <!-- Q2 -->
+
+            <FrameLayout
+                android:id="@+id/q3_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/q3_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/all_rounded_solid" />
+
+                <LinearLayout
+                    android:id="@+id/q3_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/q3_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="최근(14일 이내) 해외여행을 다녀왔나요?"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/q3_chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q3_chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="아니오" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q3_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="예                  " />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </FrameLayout>    <!-- Q3 -->
+
+            <FrameLayout
+                android:id="@+id/q4_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/q4_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/all_rounded_solid" />
+
+                <LinearLayout
+                    android:id="@+id/q4_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/q4_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="동거가족 중 최근(14일 이내)\n 한 명이라도 해외여행을 다녀왔나요?"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/q4_chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:checkedChip="@id/q1_chip1"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q4_chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="아니오" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q4_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="예                        " />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </FrameLayout>    <!-- Q4 -->
+
+            <FrameLayout
+                android:id="@+id/q5_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/q5_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/all_rounded_solid" />
+
+                <LinearLayout
+                    android:id="@+id/q5_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/q5_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="동거가종 중 자가 격리된 가족이 있나요?"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/q5_chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:checkedChip="@id/q1_chip1"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q5_chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="아니오" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/q5_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="예                       " />
+
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="제출" />    <!-- Q5 -->
+
+            <!-- Submit -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

@@ -6,16 +6,6 @@
     android:orientation="vertical"
     tools:context=".First_Fragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-
-        android:text="웹 뷰 화면"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp" />
-
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
