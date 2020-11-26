@@ -8,12 +8,57 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:633270279591:android:c7d97d3e5d80cb98f2ea82",
+        "android_client_info": {
+          "package_name": "com.dongkyan.coronahelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633270279591-bdmb04kiss78lr26lpbfll2ssobk6kup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNVS4zwXJ6rfiR8CDeMop4doa1qBKbYvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633270279591-bdmb04kiss78lr26lpbfll2ssobk6kup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:633270279591:android:50432fd8232c9017f2ea82",
         "android_client_info": {
           "package_name": "com.example.a2020_10_29d"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "633270279591-7j898c7vsi2ibm1pifoopg4ptnko4fid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a2020_10_29d",
+            "certificate_hash": "3826e1fd00db8c352feccd4551db1e06d8f0a1c6"
+          }
+        },
+        {
+          "client_id": "633270279591-36qrnqdi0ve1elf92m35fi3etc04eaei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a2020_10_29d",
+            "certificate_hash": "5cdc3eb6239d5be4317171a6ed12a761e36317fd"
+          }
+        },
         {
           "client_id": "633270279591-bdmb04kiss78lr26lpbfll2ssobk6kup.apps.googleusercontent.com",
           "client_type": 3

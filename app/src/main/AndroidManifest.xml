@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a2020_10_29d">
+    package="com.dongkyan.coronahelper">
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,7 +16,7 @@
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dongkyan.coronahelper.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
