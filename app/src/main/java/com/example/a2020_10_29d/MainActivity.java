@@ -59,6 +59,4 @@ public class MainActivity extends AppCompatActivity {
         pager.setAdapter(adapter);
         pager.setCurrentItem(0,false);
     }
-
-
 }
